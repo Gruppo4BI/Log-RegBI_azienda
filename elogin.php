@@ -5,7 +5,7 @@
   //Controllo che i dati siano arrivati tramite POST
   if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
-	  	//ok la pagina è stata davvero richiamata dalla form
+	  	//ok la pagina Ã¨ stata davvero richiamata dalla form
 	  
 	  	//recupero il contenuto della textbox email
 	  	$email = $_POST['email'];
@@ -40,7 +40,7 @@
 		  			{
 		  				if($riga['stato_account']){
 			  				$_SESSION['id']=$riga['id'];
-			  				header("Location: main.php");
+			  				header("Location: Menu.php");
 		  				}
 		  				else
 		  					header("Location: LOGIN2.php?err=2");
@@ -77,7 +77,7 @@
 				{
 					if($riga['stato_account']){
 						$_SESSION['id']=$riga['id'];
-						header("Location: main.php");
+						header("Location: Menu.php");
 						}
 					else
 						header("Location: LOGIN2.php?err=2");
